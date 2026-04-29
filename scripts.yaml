@@ -1,0 +1,222 @@
+scripts:
+  - id: 1
+    category: Image Utilities
+    title: Background Remover
+    description: Remove backgrounds from images
+    output: Image with background removed displayed
+    inputs:
+      - name: Image file
+        type: file
+        format: jpg, png
+        
+  - id: 2
+    category: Web Utilities
+    title: QR Code Generator
+    description: Create customized QR codes
+    output: Generated QR code image
+    inputs:
+      - name: Link
+        type: text
+      - name: Filename
+        type: text
+
+  - id: 3
+    category: Data Utilities
+    title: Fake Data Generator
+    description: Generate realistic-looking fake datasets
+    output: Table of generated fake data
+    inputs:
+      - name: Number of entries
+        type: number
+
+  - id: 4
+    category: Web Utilities
+    title: URL Shortener
+    description: Convert long URLs into short ones
+    output: Shortened URL
+    inputs:
+      - name: Long URL
+        type: text
+
+  - id: 5
+    category: Media
+    title: YouTube Downloader
+    description: Download YouTube videos in both audio and video formats
+    output: Downloaded video or audio file
+    inputs:
+      - name: YouTube URL
+        type: text
+      - name: Format
+        type: text
+        options: ["Audio", "Video"]
+
+  - id: 6
+    category: Communication
+    title: Bulk Email Sender
+    description: Send bulk emails effortlessly
+    output: Sent emails
+    inputs:
+      - name: Sender email
+        type: text
+      - name: Sender password
+        type: text
+      - name: Emails file
+        type: file
+        format: xlsx
+
+  - id: 7
+    category: Web Utilities
+    title: Image Downloader
+    description: Download and view images from the web
+    output: Displayed images and downloadable links
+    inputs:
+      - name: Keyword for images
+        type: text
+      - name: Number of images
+        type: number
+
+  - id: 8
+    category: Productivity
+    title: AudioBook Converter
+    description: Convert PDF files into audiobooks
+    output: Audiobook in mp3 format
+    inputs:
+      - name: PDF file
+        type: file
+        format: pdf
+
+  - id: 9
+    category: Code Utilities
+    title: Code Analyzer
+    description: Analyze Python code using Pylint and Flake8
+    output: Code analysis results
+    inputs:
+      - name: Python files
+        type: files
+        format: py
+        
+  - id: 10
+    category: System Utilities
+    title: Resource Monitor
+    description: Monitor system resources
+    output: Resource usage alerts
+    inputs:
+      - name: CPU threshold
+        type: number
+      - name: Memory threshold
+        type: number
+      - name: GPU threshold
+        type: number
+      - name: Battery threshold
+        type: number
+
+  - id: 11
+    category: Productivity
+    title: Clipboard Manager
+    description: Keep track of everything you copy
+    output: Displays copied items
+    inputs:
+      - name: Placeholder
+        type: text
+        format: 
+
+  - id: 12
+    category: Text Utilities
+    title: Spell Checker
+    description: Detect and correct spelling and grammar mistakes
+    output: Corrected text
+    inputs:
+      - name: Input text
+        type: textarea
+
+  - id: 13
+    category: Web Utilities
+    title: Link Checker
+    description: Check the web connectivity of multiple URLs
+    output: Status of provided URLs
+    inputs:
+      - name: Links file
+        type: file
+        format: txt
+      - name: Links text
+        type: textarea
+
+  - id: 14
+    category: Web Utilities
+    title: News Reader
+    description: Scrape and read trending news headlines out loud
+    output: Read aloud news headlines
+    inputs:
+      - name: News API key
+        type: text
+
+  - id: 15
+    category: Web Utilities
+    title: Article Summarizer
+    description: Generate summaries of articles
+    output: Summarized article text
+    inputs:
+      - name: Article URL
+        type: text
+
+  - id: 16
+    category: Image Utilities
+    title: Image Editor
+    description: Edit images - convert, combine, resize, and apply various filters
+    output: Edited image
+    inputs:
+      - name: Image file
+        type: file
+        format: jpg, jpeg, png, webp
+      - name: Operation
+        type: select
+        options: ["Convert Format", "Combine Images", "Resize", "Flip", "Blur", "Add Shadow", "Crop", "Adjust Brightness", "Add Watermark", "Rotate"]
+      - name: Format
+        type: text
+        visible_if: "Operation=Convert Format"
+      - name: Second Image
+        type: file
+        format: jpg, jpeg, png, webp
+        visible_if: "Operation=Combine Images"
+      - name: New Width
+        type: number
+        visible_if: "Operation=Resize"
+      - name: New Height
+        type: number
+        visible_if: "Operation=Resize"
+      - name: Direction
+        type: select
+        options: ["Horizontal", "Vertical"]
+        visible_if: "Operation=Flip"
+      - name: Blur Radius
+        type: number
+        min: 0
+        max: 10
+        step: 1
+        value: 2
+        visible_if: "Operation=Blur"
+      - name: Left
+        type: number
+        visible_if: "Operation=Crop"
+      - name: Upper
+        type: number
+        visible_if: "Operation=Crop"
+      - name: Right
+        type: number
+        visible_if: "Operation=Crop"
+      - name: Lower
+        type: number
+        visible_if: "Operation=Crop"
+      - name: Brightness
+        type: slider
+        min: 0.1
+        max: 3.0
+        step: 0.1
+        value: 1.0
+        visible_if: "Operation=Adjust Brightness"
+      - name: Watermark Text
+        type: text
+        visible_if: "Operation=Add Watermark"
+      - name: Angle
+        type: number
+        visible_if: "Operation=Rotate"
