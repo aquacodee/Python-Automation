@@ -38,8 +38,8 @@ Follow these instructions to set up and run AutoPilot on your local machine.
 1. **Clone the Repository:**
 
     ```sh
-    git clone https://github.com/Ai-Quill/automated.git
-    cd automated
+    git clone https://github.com/aquacodee/Python-Automation.git
+    cd Python-Automation
     ```
 
 2. **Install the Required Dependencies:**
@@ -86,7 +86,7 @@ We love community contributions! Here’s how you can help:
 
 ## 📚 More Information
 
-For detailed instructions, features, and more, check out our [GitHub repo](https://github.com/Ai-Quill/automated).
+For detailed instructions, features, and more, check out our [GitHub repo](https://github.com/aquacodee/Python-Automation).
 
 ## 🎉 Special Thanks
 
