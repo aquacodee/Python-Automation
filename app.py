@@ -724,7 +724,7 @@ def run_url_shortener(long_url):
         st.error(f"Error: {e}")
 
 
-
+#bulk email sender
 def run_bulk_email_sender(sender_email, sender_password, emails_file):
     file_path = save_uploaded_file(emails_file)
     try:
