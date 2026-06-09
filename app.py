@@ -692,7 +692,7 @@ def run_qr_code_generator(link, filename):
     except Exception as e:
         st.error(f"Error: {e}")
 
-
+# fake data generation
 def run_fake_data_generator(num_entries):
     try:
         fake = Faker()
